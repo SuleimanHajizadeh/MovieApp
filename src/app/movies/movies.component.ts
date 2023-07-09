@@ -10,7 +10,7 @@ export class MoviesComponent {
     movies!: Movie[];
     selectedMovie!: Movie;
 
-    constructor(private movieService:MovieService) {}
+    constructor(private movieService: MovieService) { }
 
     ngOnInit(): void {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -23,6 +23,9 @@ export class MoviesComponent {
     }
 
     getMovies(): void {
-        this.movies = this.movieService.getMovies()
+        this.movieService.getMovies()
+            .subscribe(movies => {
+                this.movies = movies;
+            });
     }
 }
