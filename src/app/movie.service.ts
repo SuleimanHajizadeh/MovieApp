@@ -24,6 +24,6 @@ export class MovieService {
 
   getMovie(id: number): Observable<Movie> {
     this.loggingService.add('MovieService: get detail by id='+ id) 
-    return of(Movies.find(movie => movie.id === id));
+    return this.http.get<Movie>(this.apiMoviesUrl+'/'+id)
   }
 }
