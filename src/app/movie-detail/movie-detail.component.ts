@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
-  // localhost:3000/detail/2
+  // localhost:3000/detail/3
   @Input() movie!: Movie
 
   constructor(
@@ -24,7 +24,7 @@ export class MovieDetailComponent implements OnInit {
   }
 
   getMovie(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.movieService.getMovie(id)
       .subscribe(movie => this.movie = movie)
   }

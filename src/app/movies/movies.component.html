@@ -30,6 +30,8 @@
             <textarea #description class="form-control"></textarea>
         </div>
 
-        <button (click)="add(name.value,imageUrl.value,description.value); name.value=''; imageUrl.value=''; description.value='';" class="btn btn-primary btn-sm">Save</button>
+        <button
+            (click)="add(name.value,imageUrl.value,description.value); name.value=''; imageUrl.value=''; description.value='';"
+            class="btn btn-primary btn-sm">Save</button>
     </div>
 </div>

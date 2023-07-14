@@ -6,7 +6,11 @@ import { LoggingService } from '../logging.service';
   templateUrl: './logging.component.html',
   styleUrls: ['./logging.component.css']
 })
-export class LoggingComponent {
+export class LoggingComponent implements OnInit{
 
   constructor(public loggingService: LoggingService) { }
+
+  ngOnInit() {
+    
+  }
 }
