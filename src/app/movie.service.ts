@@ -39,6 +39,6 @@ export class MovieService {
   }
 
   delete(movie: Movie): Observable<Movie> {
-    return this.http.delete<Movie>(this.apiMoviesUrl+'/'+movie.id);
+    return this.http.delete<Movie>(this.apiMoviesUrl + '/' + movie.id);
   }
 }
